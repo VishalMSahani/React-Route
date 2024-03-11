@@ -5,9 +5,9 @@ import loginImage from '../assets/login.png'
 const Signin = ({setIsLoggedIn}) => {
   return (
     <Template
-    Title="Login to StudyNotion"
-    Desc1="Best Edtech Paltform"
-    Desc2="in the world"
+    Title="Login to StudyNotion" 
+    Desc1="Best Edtech Paltform" 
+    Desc2=" in the world"
     FormType="login"
     Image={loginImage}
     setIsLoggedIn={setIsLoggedIn}

@@ -7,7 +7,7 @@ const Navbar = ({ isLogedIn, setIsLoggedIn }) => {
     
     
   return (
-    <div className='flex justify-evenly py-3 bg-black' >
+    <div className='flex justify-evenly py-3 bg-richblack-900' >
       <div>
         <Link  to="/">
         <img src={Logo} alt="Logo" width="200px"  />

@@ -23,32 +23,36 @@ const Signinform = ({setIsLoggedIn}) => {
    }
 
   return (
-    <form  onSubmit={formHandel}>
+    <form  onSubmit={formHandel} className='flex flex-col w-full  mt-6'>
 {/* email */}
         <div>
-        <label htmlFor="email">
-            <p>Email</p>
-            <input onChange={handleInputChange} value={formData.email}
+        <label className='w-full' htmlFor="email">
+            <p className='text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]'>Email</p>
+            <input required
+             className='bg-richblack-800 rounded-[0.75rem] w-full p-[12px] text-richblack-5'
+             onChange={handleInputChange} value={formData.email}
              type='email' name='email' id='email' />
         </label>
         </div>
 
 {/* Password */}
-        <div>
-        <label htmlFor="password">
-            <p>Password</p>
-            <input 
+        <div className='mt-1'>
+        <label className='w-full relative' htmlFor="password">
+            <p className='text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]'>Password</p>
+            <input required
+             className='bg-richblack-800 rounded-[0.75rem] w-full p-[12px] text-richblack-5'
              onChange={handleInputChange} value={formData.password}
             type={showpassword ? "text" : "password"}
              name='password' id='email' />
 
-             <span onClick={()=>setshowpassword(!showpassword)}>
+             <span className='absolute right-3 top-[38px] cursor-pointer'
+             onClick={()=>setshowpassword(!showpassword)}>
                 {
                  showpassword? <AiOutlineEyeInvisible/> : <AiOutlineEye/>
                 }</span>
         </label>
         </div>
-        <div>
+        <div className='text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]'>
             <Link to="to">Forgot Password</Link>
         </div>
         <button>
