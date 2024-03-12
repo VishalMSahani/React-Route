@@ -7,14 +7,14 @@ const Navbar = ({ isLogedIn, setIsLoggedIn }) => {
     
     
   return (
-    <div className='flex justify-evenly py-3 bg-richblack-900' >
+    <div className='flex justify-between items-center w-11/12 max-w-[1160px] mt-3 mx-auto' >
       <div>
         <Link  to="/">
         <img src={Logo} alt="Logo" width="200px"  />
         </Link>
       </div>
       <div>
-        <ul className='flex justify-center gap-6 text-white text-xl font-semibold mt-1'>
+        <ul className='flex gap-x-6 text-richblack-100'>
             <li>
                 <Link to="/">Home</Link>
             </li>
@@ -26,27 +26,30 @@ const Navbar = ({ isLogedIn, setIsLoggedIn }) => {
             </li>
         </ul>
         </div>
-        <div className='flex gap-6  text-white text-xl font-semibold mt-1'>
+        <div className='flex items-center gap-x-4 text-richblack-100'>
             { !isLogedIn  &&
                 <Link to="/signin">
-                <button  >Login</button>
+                <button className='bg-richblack-800 py-[8px] px-[12px] rounded-[8px] border border-richblack-700' >Login</button>
 
                 </Link>
             }
             { !isLogedIn  &&
                 <Link to="/signup">
-                <button>Sign Up</button>
+                <button className='bg-richblack-800 py-[8px] px-[12px] rounded-[8px] border border-richblack-700'
+                >Sign Up</button>
                 </Link>
             }
             { isLogedIn &&
                 <Link to="/">
-                <button onClick={() => {setIsLoggedIn(false);
+                <button className='bg-richblack-800 py-[8px] px-[12px] rounded-[8px] border border-richblack-700'
+                 onClick={() => {setIsLoggedIn(false);
                 toast.success("Loged Out")}}>Log Out</button>
                 </Link>
             }
             { isLogedIn &&
                 <Link to="/dashboard">
-                <button>Dashboard</button>
+                <button className='bg-richblack-800 py-[8px] px-[12px] rounded-[8px] border border-richblack-700'
+                >Dashboard</button>
                 </Link>
             }   
         

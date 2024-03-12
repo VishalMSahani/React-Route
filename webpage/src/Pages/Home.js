@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Home = () => {
+const Home = (setIsLoggedIn) => {
   return (
-    <div>
+    <div className='flex items-center justify-center text-3xl'>
       Home
     </div>
   )
